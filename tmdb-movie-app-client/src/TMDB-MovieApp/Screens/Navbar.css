@@ -1,0 +1,1361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row{
+    margin-right: 0;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+}
+input{
+    padding: 0.4rem 0.5rem;
+    border-radius: 5px;
+}
+
+.nextAndPrev{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.nextAndPrev > *{
+    min-width: 100px;
+}
+.searchZComp{
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+.row .navContainer{
+    padding-top: 1.5rem;
+}
+.navBar{
+    margin-left: 1rem;
+}
+.navBarBrand{
+    margin-bottom: 2rem;
+}
+.navbar-brand > span{
+    padding-top: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.menuHeader{
+    font-size: 1rem;
+    opacity: .5;
+}
+.nav-link{
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 1px;
+    margin: 0;
+    display: flex;
+}
+.movieIcon{
+    margin-right: 0.5rem;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+.navIcon{
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+.nav-link .active{
+    background-color: black;
+    color: white;
+}
+
+.navBarBrandResponsive{
+    margin-bottom: 0.5rem;
+}
+
+/* SEARCH COMPONENT */
+
+.row > .movieContainer{
+    margin-top: 2rem;
+}
+
+.movieNavbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-bottom: 1rem;
+}
+.navLinks{
+    display: flex;
+    gap: 1rem;
+}
+.navLinks h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.searchComponents h5{
+    width: 200px;
+    border-radius: 3rem;
+    padding:.5rem 1rem;
+    font-weight: 450;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: .6;
+}
+.searchComponents h5 > .navIcon{
+    font-size: 1.2rem;
+}
+
+.resposniveMovieNavbar{
+    display: block;
+}
+.resposniveMovieNavbar .navLinks{
+    justify-content: space-around;
+}
+.resposniveMovieNavbar .searchComponents{
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: center;
+}
+.resposniveMovieNavbar .searchComponents h5{
+    width: 90%;
+}
+
+
+/* CAROUSEL */
+
+.carousel .carousel-indicators{
+    display: none;
+}
+.Image{
+    width: 100%;
+    /* height: 574px; */
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.carouselImage{
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.Image::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(0deg , #000, 60%, transparent);
+    opacity: .6;
+}
+    .carousel-item > .carousel-caption{
+        text-align:start;
+        position: absolute;
+        left: 5%;
+        right: 0;
+        top: 55%;
+        bottom: 0;
+    }
+    .carousel-caption .movieHeading, .carousel-caption .movieGenre{
+        padding: 0;
+        margin: 0;
+    }
+    .carousel-caption .movieGenre{
+        padding: 0.5rem 0;
+    }
+    .buttons{
+        display: flex;
+    }
+    .buttons .btn{
+        padding: 0.5rem 2rem;
+    }
+    .buttons .watchButton{
+        font-size: 1.2rem;
+        border-radius: 8px;
+    }
+    .buttons .favIcon{
+        font-size: 2rem;
+        padding: 0.5rem;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .buttons .favIcon .navIcon{
+        margin: 0.2rem;
+    }
+
+
+/* OWL CAROUSEL */
+
+.carouselHeader{
+    /* margin-top: 2rem; */
+    display: flex;
+    justify-content: space-between;
+}
+.owl-theme{
+    margin-top: 1rem;
+}
+.owl-theme .item{
+    aspect-ratio: 2/3;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.item .movieImage img{
+    width: 100%;
+    height: 100%;
+}
+.item .movieImage::before{
+    margin: 0;
+    padding: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(0deg , #000, 50%, transparent);
+    opacity: .8;
+}
+.item .movieBody{
+    color: #faf9f9;
+    top: 65%;
+    height: 55%;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+}
+.item .movieBody > * , .moviesContainer .card .movieBody > *{
+    padding: 0;
+    margin: 0;
+}
+.item .movieBody > .movieName{
+    font-size: 1rem;
+}
+.item .movieBody > .movieGenre{
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+.item .movieBody > .movieRatings{
+    font-size: 0.7rem;
+}
+
+.owl-theme-responsive{
+    margin-top: 1rem;
+}
+.owl-theme-responsive .movieBody > .movieGenre{
+    font-size: 0.6rem;
+    opacity: 0.7;
+}
+.owl-theme-responsive .movieBody > .movieRatings{
+    font-size: 1rem;
+}
+
+
+/* SINGLE MOVIE PAGE */
+
+/* SEARCH COMPONENT */
+.singleMovieSearchComponents{
+    float: right;
+}
+
+/* CAROUSEL */
+.singleMovieCarouselImage{
+    aspect-ratio: 16/9;
+}
+.singleMovieCardComponent .card{
+    margin: 1rem auto;
+    border: none;
+    display: flex;
+    flex-direction: row;
+}
+.singleMovieCardComponent .card .movieImage img{
+    width: 100%;
+    height: 100%;
+}
+.singleMovieCardComponent .card .movieImage{
+    max-width: 25%;
+    aspect-ratio: 2/3;
+}
+.singleMovieCardComponent .card .movieBody,.singleMovieCardComponent .card .movieWrapper > h5 {
+    margin-left: 1rem;
+}
+.singleMovieCardComponent .card .movieWrapper {
+    display: flex;
+    align-items: center;
+}
+.singleMovieCardComponent .card .movieBody h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.buttonsContainer{
+    display: flex;
+    gap: 1vw;
+}
+.addToWatchList , .addToFavourites{
+    padding: 0.7rem 2rem;
+    margin-top: 1vw;
+    border-radius: 0.5vw;
+}
+/* CAST AND CREW */
+.castAndCrew{
+    margin-top: 2vw;
+}
+.castCrew{
+    margin: 0;
+    font-size: 1.5vw;
+}
+.castAndCrew .item{
+    height: auto;
+}
+.castAndCrew .item .active{
+    background-color: white !important;
+    color: black !important;
+}
+.castAndCrew .item .castImage{
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.castAndCrew .item .castImage img{
+    width: 100%;
+    height: 100%;
+}
+ .castName{
+    text-align: center;
+}
+/* REVIEWS */
+.mainReviewContainer{
+    border: 2px solid black;
+    padding: 1vw;
+}
+.profileContainer{
+    display: flex;
+}
+.profile{
+    max-width: 12%;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+.profile > img{
+    width: 100%;
+}
+.profileInfo{
+    margin-left: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.profileInfo .persona .profileName, .ratingText{
+    font-size: 1.5vw;
+    margin-bottom: 0;
+}
+.profileInfo .persona .profileEmail{
+    font-size: 0.8vw;
+}
+.timeStamp .time, .reviewText{
+    font-size: 1vw;
+}
+.ratingContainer{
+    margin-top: 1vw;
+}
+
+/* SEARCHPAGE */
+.searchComponentMain h5{
+    width: 100%;
+    font-size: 1rem;
+}
+/* MOVIE MAIN */
+.searchMoviesContainer{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2,50%);
+    margin-bottom: 2rem;
+}
+
+.searchMoviesContainer .card{
+    aspect-ratio: 2/3;
+    box-shadow: 0 5px 10px rgba(0,0,0,.5);
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+.searchMoviesContainer .card .movieImageSearch{
+    position: relative;
+}
+.searchMoviesContainer .card .movieImageSearch>img, .searchMoviesContainer .card .movieImageSearch{
+    height: 100%;
+    width: 100%;
+}
+.movieImageSearch::before{
+    margin: 0;
+    padding: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(0deg , #000, 60%, transparent);
+    opacity: .8;
+}
+.searchMoviesContainer .card .movieBody{
+    color: #faf9f9;
+    top: 50%;
+    height: 55%;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+}
+.cardTextGenre, .cardTextReview, .cardTitle{
+    margin: 0;
+    padding: 0;
+}
+.cardTitle,.reviewText{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 1rem ;
+}
+.reviewText{
+    -webkit-line-clamp: 10;
+}
+.cardTextGenre{
+    font-size: 0.7rem;
+}
+.cardTextReview{
+    font-size: 0.8rem;
+}  
+
+/* PROFILE PAGE */
+.profilePage{
+    margin-top: 1rem;
+}
+.profilePage .profile{
+    max-width: 30%;
+    aspect-ratio: 1/1;
+}
+.profilePage .profileInfo{
+    margin-left: 1rem;
+}
+.profilePage .profileInfo .persona .profileName{
+    font-size: 1rem;
+}
+.profilePage .profileInfo .persona .profileEmail{
+    font-size: 0.8rem;
+}
+.profilePage .profileInfo .timeStamp .time{
+    font-size: 1rem;
+}
+/* WATCHLIST */
+.watchlistNavbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.watchlistNavbar > *{
+    font-size: 1rem;
+}
+.watchListContainer .cardContainer{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: 2px solid black;
+}
+.watchListContainer .cardContainer .moviePicture{
+    max-width: 100%;
+}
+.watchListContainer .cardContainer .moviePicture img{
+    width: 100%;
+    aspect-ratio: 2/3;
+}
+.watchListContainer .cardContainer .movieContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1rem;
+}
+.watchListContainer .cardContainer .movieContent .movieContentWrapper .movieWrapper > *{
+    margin: 0;
+    padding: 0;
+}
+.movieContentWrapper .movieWrapper .movieName{
+    font-size: 1.1rem;
+}
+.movieContentWrapper .movieWrapper .movieGenre{
+    font-size: 0.8rem;
+}
+.movieContentWrapper .movieRating{
+    font-size: 0.9rem;
+}
+.movieContent .movieStatus{
+    text-align: right;
+}
+.movieStatus .changeStatus{
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+.movieStatus .status{
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* SignUp */
+.signupForm{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+.signupFormContainer{
+    padding: 2rem;
+    border: 2px solid black;
+    margin: auto 2rem;
+}
+.submitSignup{
+    text-align: center;
+    margin: 1rem auto; 
+}
+.formHeader{
+    text-align: center;
+}
+.formHeader .movieIcon{
+    font-size: 1.7rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* Link Styling */
+.linkStyle, .linkStyle:hover .linkStyle:focus, .linkStyle:active{
+    text-decoration: none;
+}
+.searchBtn{
+    background-color: transparent;
+    border: none;
+    margin-left: 0.5rem;
+}
+.singleMovieCardComponent .card{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+@media only screen and (min-width : 325px) and (max-width : 451px){
+    .container-fluid{
+        width: auto;
+    }
+    /* NAVBARS */
+    .navBarBrand{
+        margin-bottom: 1rem;
+    }
+    .navbar-brand > span{
+        padding-top: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .movieIcon{
+        font-size: 2rem;
+    }
+    .navbar-nav .nav-link{
+        padding-left: auto;
+    }
+    .navIcon,.navLinks h3{
+        font-size: 1.2rem;
+    }
+    .resposniveMovieNavbar .searchComponents h5, 
+    .resposniveMovieNavbar .searchComponents h5 > .navIcon,
+    .navbar-nav .nav-link{
+        font-size: 1rem;
+    }
+
+    /*CAROUSEL*/
+    .carousel-item > .carousel-caption{
+        top: 40%;
+    }
+    .carousel-caption .movieHeading{
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+    }
+    .carousel-caption .movieGenre{
+        padding:  0;
+        font-size: 0.8rem;
+    }
+    .buttons .btn{
+        padding: 0.3rem 1rem;
+    }
+    .buttons .watchButton{
+        font-size: 0.7rem;
+        border-radius: 5px;
+    }
+    .buttons .favIcon{
+        font-size: 0.5rem;
+        padding: 0.3rem;
+    }
+    .Image{
+        aspect-ratio: 16/9;
+    }
+
+    .owl-theme-responsive .item .movieBody {
+        top: 65%;
+    }
+    .owl-theme-responsive .item .movieBody .movieName{
+        font-size: 1rem;
+    }
+    .owl-theme-responsive .item .movieBody .movieRatings{
+        font-size:0.8rem;
+    }
+
+    /* OWL CAROUSEL */
+    .carouselHeader .category{
+        font-size: 1.2rem;
+        align-items: center;
+        margin: auto 0;
+    }
+    .carouselHeader .seeMore{
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    /* SINGLE MOVIE PAGE */
+    .row > .movieContainer{
+        margin-top: 0;
+    }
+
+    /* SEARCH COMPONENT */
+
+    /* CAROUSEL */
+    .singleMovieCardComponent .card{
+        margin: 1rem auto;
+        border: none;
+        display: grid;
+        grid-template-columns:40% 60%;
+    }
+    .singleMovieCardComponent .card .movieImage{
+        max-width: 90%;    
+        aspect-ratio: 2/3;
+        justify-content: center;
+    }
+    .singleMovieCardComponent .card .movieWrapper .movieName {
+        margin-bottom: 0;
+        font-size: 5vw;
+        font-weight: 400;
+    }
+    .singleMovieCardComponent .card .movieWrapper  .movieRating {
+        margin: auto;
+        font-size: 3vw;
+        margin-left: 2vw;
+    }
+    .singleMovieCardComponent .card .movieBody .movieDesc {
+        margin: 0;
+        font-size: 2.5vw;
+        font-weight: 400;
+    }
+    .singleMovieCardComponent .card .movieBody .movieGenre{
+        margin-bottom: 1vw;
+        font-size: 2vw;
+    }
+    .singleMovieCardComponent .card .movieBody .buttonsContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+    }
+    .addToWatchList , .addToFavourites{
+        font-size:3vw;
+        padding:1vw;
+        margin-top: 1vw;
+        border-radius: 0.5vw;
+    }
+    /* CAST AND CREW */
+    .castCrew{
+        margin: 0;
+        font-size: 5vw;
+    }
+    .castName{
+        text-align: center;
+        font-size: 3vw;
+    }
+    /* REVIEW */
+    .mainReviewContainer{
+        border: 2px solid black;
+        padding: 1vw;
+        margin: 2vw 0;
+    }
+    .profile{
+        max-width: 20%;
+    }
+    .profileInfo{
+        margin-left: 1vw;
+    }
+    .profileInfo .persona .profileName, .ratingText{
+        font-size: 3vw;
+    }
+    .profileInfo .persona .profileEmail{
+        font-size: 1.5vw;
+    }
+    .timeStamp .time, .reviewText{
+        font-size: 2.5vw;
+    }
+    .reviewText{
+        margin: 0;
+    }
+
+    /* WATCHLIST */
+    .owl-theme-responsive-test .owl-stage-outer .owl-stage {
+        width: 120% !important;
+        overflow: hidden;
+    }
+    .owl-theme-responsive-test .item {
+       padding-top: 1rem;
+       display: flex;justify-content: center;
+       align-items: center;
+    }
+    .owl-theme-responsive-test .item .movieBody .movieName{
+        font-size: 4vw;
+    }
+    .owl-theme-responsive-test .item .movieBody .movieGenre{
+        font-size: 3vw;
+    }
+    .owl-theme-responsive-test .item .movieBody .movieRatings{
+        font-size: 3.5vw;
+    }
+    .owl-theme-responsive-test .item .movieBody{
+        top: 71%;
+    }
+
+    /* SEARCH PAGE */
+    .searchCard .movieBody{
+        color: #faf9f9;
+        top:60%;
+        height: 55%;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 2;
+        position: absolute;
+        text-align: center;
+    }
+    .cardTitle{
+        font-size: 0.5rem;
+    }
+    .cardTextGenre, .cardTextReview, .cardTitle{
+        margin: 0;
+        padding: 0;
+        font-size: 0.7rem;
+    }
+    .cardTextReview{
+        font-size: 0.8rem;
+    }
+
+
+    /* Signup */
+    .signupFormContainer > *{
+        display: block;
+    }
+}
+@media only screen and (min-width : 451px) and (max-width : 581px){
+    .row > .movieContainer{
+        margin-top: 0;
+    }
+    /* SINGLE MOVIE */
+    .singleMovieCardComponent .card{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    .singleMovieCardComponent .card .movieImage{
+        max-width: 90%;
+    }
+    .singleMovieCardComponent .card .movieBody .movieGenre {
+        font-size: 0.8rem;
+    }
+    .singleMovieCardComponent .card .movieBody .movieDesc {
+        font-size: 0.8rem;
+    }
+    .addToWatchList , .addToFavourites{
+        padding: 0.5rem 1rem;
+        margin-top: 1vw;
+        border-radius: 0.5vw;
+    }
+    /* CCAROUSEL */
+    .carousel-item > .carousel-caption{
+        top: 50%;
+    }
+    .carousel-caption .movieHeading{
+        padding: 0;
+        margin: 0;
+        font-size: 1.1rem;
+    }
+    .carousel-caption .movieGenre{
+        padding:  0;
+        font-size: 0.9rem;
+    }
+    .buttons .btn{
+        padding: 0.3rem 1rem;
+    }
+    .buttons .watchButton{
+        font-size: 0.8rem;
+        border-radius: 5px;
+    }
+    .buttons .favIcon{
+        font-size: 0.5rem;
+        padding: 0.3rem;
+    }
+    .Image{
+        aspect-ratio: 16/9;
+    }
+
+    /* OWL CAROUSEL MOVIES */
+    
+    .owl-theme-responsive{
+        margin-top: 1rem;
+    }
+    .owl-theme-responsive .movieBody{
+        top: 60%;
+    }
+    .owl-theme-responsive .movieBody > .movieName{
+        font-size: 1.1rem;
+    } 
+    .owl-theme-responsive .movieBody > .movieGenre{
+        font-size: 0.75rem;
+        opacity: 0.7;
+    }
+    .owl-theme-responsive .movieBody > .movieRatings{
+        font-size: 0.85rem;
+    }   
+
+
+    /* CAST AND CREW */
+    .castCrew{
+        font-size: 4vw;
+    }
+    /* REVIEWS */
+    .profile{
+        max-width: 20%;
+    }
+    .profileInfo .persona .profileName, .ratingText{
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    .profileInfo .persona .profileEmail{
+        font-size:0.8rem;
+    }
+    .timeStamp .time, .reviewText{
+        font-size: 0.9rem;
+    }
+
+     /* WATCHLIST */
+    .carouselHeader{
+        margin-top: 3vw;
+    }
+    .owl-theme-responsive-test .item {
+       padding-top: 1rem;
+    }
+    .owl-theme-responsive-test .item .movieBody .movieName{
+        font-size: 1.2rem;
+    }
+    .owl-theme-responsive-test .item .movieBody .movieGenre{
+        font-size: 0.7rem;
+    }
+    .owl-theme-responsive-test .item .movieBody .movieRatings{
+        font-size: 1rem;
+    }
+    .owl-theme-responsive-test .item .movieBody{
+        top: 65%;
+    }
+
+    /* SEARCH PAGE */
+    .searchComponentMain{
+        display: flex;
+        justify-content: end;
+    }
+    .searchComponentMain h5{
+        width: 50%;
+    }
+    .searchMoviesContainer{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3,33%);
+        margin-bottom: 2rem;
+    }
+
+    /* PROFILE PAGE */
+    .profilePage .profileInfo .persona .profileName{
+        font-size: 1.4rem;
+    }
+    .profilePage .profileInfo .persona .profileEmail{
+        font-size: 1rem;
+    }
+    .profilePage .profileInfo .timeStamp .time{
+        font-size: 1.2rem;
+    }
+    /* WATCHLIST */
+    .watchlistNavbar > *{
+        font-size: 1.15rem;
+    }
+    .movieContentWrapper .movieWrapper .movieName{
+        font-size: 1.2rem;
+    }
+    .movieContentWrapper .movieWrapper .movieGenre{
+        font-size: 0.9rem;
+    }
+    .movieContentWrapper .movieRating{
+        font-size: 1.1rem;
+    }
+    .movieStatus .changeStatus{
+        font-size: 0.9rem;
+    }
+    .movieStatus .status{
+        font-size: 1.1rem;
+    }
+}
+@media only screen and (min-width : 580px) and (max-width : 768px){
+    .row > .movieContainer{
+        margin-top: 0;
+    }
+    /* CAROUSEL */
+    .carousel-item > .carousel-caption{
+        top: 50%;
+    }
+    .carousel-caption .movieHeading{
+        font-size: 1.2rem;
+    }
+    .carousel-caption .movieGenre{
+        padding:  0.5rem;
+        font-size: 1rem;
+    }
+    .buttons .watchButton{
+        font-size: 0.9rem;
+    }
+    .carouselHeader{
+        margin-top: 2rem;
+    }
+    .owl-theme{
+        margin-top: 1rem;
+    }
+    .owl-theme .movieBody > .movieName{
+        font-size: 1.1rem;
+    } 
+    .owl-theme .movieBody > .movieGenre{
+        font-size: 0.75rem;
+        opacity: 0.7;
+    }
+    .owl-theme .movieBody > .movieRatings{
+        font-size: 0.85rem;
+    }
+    /* SINGLE MOVIE */
+    .singleMovieCardComponent .card .movieImage{
+        max-width: 100%;
+    }
+    .singleMovieCardComponent .card .movieBody .movieWrapper > *{
+        font-size: 1.3rem;
+    }
+    .singleMovieCardComponent .card .movieBody .movieGenre {
+        font-size: 0.9rem;
+    }
+    .singleMovieCardComponent .card .movieBody .movieDesc {
+        font-size:0.9rem;
+    }
+    /* CAST AND CREW */
+    .castCrew{
+        font-size: 1.2rem;
+    }   
+    /* REVIEWS */
+    .profile{
+        max-width: 20%;
+    }
+    .profileInfo .persona .profileName, .ratingText{
+        font-size: 1.1rem;
+        margin-bottom: 0;
+    }
+    .profileInfo .persona .profileEmail{
+        font-size:0.9rem;
+    }
+    .timeStamp .time, .reviewText{
+        font-size: 1rem;
+    }
+
+     /* WATCHLIST */
+    .owl-theme .item .movieBody{
+        top: 70%;
+    }
+
+    /* SEARCH PAGE */
+    .searchMoviesContainer .card .movieBody{
+        top: 65%;
+    }
+    .searchComponentMain{
+        display: flex;
+        justify-content: end;
+    }
+    .searchComponentMain h5{
+        width: 50%;
+    }
+    .searchMoviesContainer{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3,33%);
+        margin-bottom: 2rem;
+    }
+
+    /* PROFILE PAGE */
+    .profilePage .profile{
+        max-width: 25%;
+        aspect-ratio: 1/1;
+    }
+    .profilePage .profileInfo .persona .profileName{
+        font-size: 1.5rem;
+    }
+    .profilePage .profileInfo .persona .profileEmail{
+        font-size: 1.2rem;
+    }
+    .profilePage .profileInfo .timeStamp .time{
+        font-size: 1.35rem;
+    }
+    /* WATCHLIST */
+    .watchlistNavbar > *{
+        font-size: 1.25rem;
+    }
+    .movieContentWrapper .movieWrapper .movieName{
+        font-size: 1.4rem;
+    }
+    .movieContentWrapper .movieWrapper .movieGenre{
+        font-size: 1.1rem;
+    }
+    .movieContentWrapper .movieRating{
+        font-size: 1.25rem;
+    }
+    .movieStatus .changeStatus{
+        font-size: 1rem;
+    }
+    .movieStatus .status{
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (min-width : 768px) and (max-width : 992px){
+    .row > .movieContainer{
+        margin-top: 0;
+    }
+    .navBarBrand{
+        margin-bottom: 0;
+    }
+    /* SINGLE MOVIE */
+    .singleMovieCardComponent .card{
+        grid-template-columns: 20% 80%;
+    }
+    .singleMovieCardComponent .card .movieImage{
+        max-width: 100%;
+    }
+    .singleMovieCardComponent .card .movieBody .movieWrapper > *{
+        font-size: 1.5rem;
+    }
+    .singleMovieCardComponent .card .movieBody .movieGenre {
+        font-size: 1rem;
+    }
+    .singleMovieCardComponent .card .movieBody .movieDesc {
+        font-size: 1.1rem;
+    }
+    /* CAST AND CREW */
+    .castCrew{
+        font-size: 1.4rem;
+    }   
+    /* REVIEWS */
+    .profile{
+        max-width: 15%;
+    }
+    .profileInfo .persona .profileName, .ratingText{
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+    .profileInfo .persona .profileEmail{
+        font-size: 1rem;
+    }
+    .timeStamp .time, .reviewText{
+        font-size: 1.1rem;
+    }
+
+     /* WATCHLIST */
+    .carouselHeader{
+        margin-top: 2rem;
+    }
+    .owl-theme .item .movieBody{
+        top: 75%;
+    }
+    /* SEARCH PAGE */
+    .searchMoviesContainer .card .movieBody{
+        top: 70%;
+    }
+    .searchComponentMain{
+        display: flex;
+        justify-content: end;
+    }
+    .searchComponentMain h5{
+        width: 30%;
+    }
+    .searchMoviesContainer{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3,33%);
+        margin-bottom: 2rem;
+    }
+    .card .cardTextGenre{
+        font-size: 0.75rem;
+    }
+
+    /* PROFILE PAGE */
+    .profilePage .profile{
+        max-width: 20%;
+        aspect-ratio: 1/1;
+    }
+    .profilePage .profileInfo .persona .profileName{
+        font-size: 1.8rem;
+    }
+    .profilePage .profileInfo .persona .profileEmail{
+        font-size: 1.2rem;
+    }
+    .profilePage .profileInfo .timeStamp .time{
+        font-size: 1.5rem;
+    }
+    /* WATCHLIST */
+    .watchListContainer .cardContainer{
+        grid-template-columns: 20% 80%;
+    }
+    .watchlistNavbar > *{
+        font-size: 1.35rem;
+    }
+    .watchListContainer .cardContainer .movieContent .movieContentWrapper .movieWrapper > *{
+        margin: 0.5rem auto;
+        padding: 0;
+    }
+    .movieContentWrapper .movieWrapper .movieName{
+        font-size: 1.5rem;
+    }
+    .movieContentWrapper .movieWrapper .movieGenre{
+        font-size: 1.25rem;
+    }
+    .movieContentWrapper .movieRating{
+        font-size: 1.4rem;
+    }
+    .movieStatus .changeStatus{
+        font-size: 1.1rem;
+    }
+    .movieStatus .status{
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (min-width : 992px) and (max-width : 1200px){
+    .row > .movieContainer{
+        margin-top: 2rem;
+    }
+    .navBarBrand{
+        margin-bottom: 0;
+    }
+    /* CAROUSEL */
+    .owl-theme .item .movieBody{
+        top: 65%;
+    }
+    .owl-theme .item .movieBody .movieName{
+        font-size: 1rem;
+    }
+    .owl-theme .item .movieBody .movieRatings{
+        font-size: 0.85rem;
+    }
+    /* SINGLE MOVIE */
+    .singleMovieCardComponent .card .movieImage{
+        max-width:100%;
+        aspect-ratio: 2/3;
+    }
+    /* CAST AND CREW */
+    /* REVIEWS */
+    .profileInfo .persona .profileEmail{
+        font-size: 1rem;
+    }
+    .timeStamp .time, .reviewText{
+        font-size: 1.1rem;
+    }
+    /* WATCHLIST */
+    .tableCol{
+        margin-left: 25%;
+    }
+    .carouselHeader{
+        margin-top: 2rem;
+    }
+    
+    /* SEARCH PAGE */
+    .searchMoviesContainer .card .movieBody{
+        top: 65%;
+    }
+    .searchComponentMain{
+        display: flex;
+        justify-content: end;
+    }
+    .searchComponentMain h5{
+        width: 50%;
+    }
+    .searchMoviesContainer{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3,33%);
+        margin-bottom: 2rem;
+    }
+
+    /* PROFILE PAGE */
+    .profilePage .profile{
+        max-width: 15%;
+        aspect-ratio: 1/1;
+    }
+    .profilePage .profileInfo .persona .profileName{
+        font-size: 1.7rem;
+    }
+    .profilePage .profileInfo .persona .profileEmail{
+        font-size: 1.2rem;
+    }
+    .profilePage .profileInfo .timeStamp .time{
+        font-size: 1.5rem;
+    }
+    /* WATCHLIST */
+    .watchListContainer .cardContainer{
+        grid-template-columns: 15% 75%;
+    }
+    .watchlistNavbar > *{
+        font-size: 1.35rem;
+    }
+    .watchListContainer .cardContainer .movieContent .movieContentWrapper .movieWrapper > *{
+        margin: 0.5rem auto;
+        padding: 0;
+    }
+    .movieContentWrapper .movieWrapper .movieName{
+        font-size: 1.5rem;
+    }
+    .movieContentWrapper .movieWrapper .movieGenre{
+        font-size: 1.25rem;
+    }
+    .movieContentWrapper .movieRating{
+        font-size: 1.4rem;
+    }
+    .movieStatus .changeStatus{
+        font-size: 1.1rem;
+    }
+    .movieStatus .status{
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (min-width : 1200px){
+    .row > .movieContainer{
+        margin-top: 2rem;
+    }
+    .navBarBrand{
+        margin-bottom: 0;
+    }
+    /* SINGLE MOVIE */
+     .singleMovieCardComponent .card .movieImage{
+        max-width: 100%;
+    } 
+    /* CAST AND CREW */
+    /* REVIEWS */
+    .profileInfo .persona .profileEmail{
+        font-size: 1rem;
+    }
+    .timeStamp .time, .reviewText{
+        font-size: 1.1rem;
+    }
+    .reviewsAndRating{
+        margin-bottom: 2rem;
+    }
+    /* WATCHLIST */
+    .owl-theme .item .movieBody{
+        top: 65%;
+    }
+
+    /* SEARCH PAGE */
+    .searchMoviesContainer .card .movieBody{
+        top: 65%;
+    }
+    .searchComponentMain{
+        display: flex;
+        justify-content: end;
+    }
+    .searchComponentMain h5{
+        width: 50%;
+    }
+    .searchMoviesContainer{
+        justify-content: center;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3,31%);
+        margin-bottom: 2rem;
+    }
+    .searchMoviesContainer .card{
+        position: relative;
+    }
+    .searchMoviesContainer .card .movieImageSearch >img{
+        width: 100%;
+    }
+
+    /* PROFILE PAGE */
+    .profileHeader,.watchlistHeader{
+        font-size: 2rem;
+    }
+    .profilePage .profile{
+        max-width: 12.5%;
+        aspect-ratio: 1/1;
+    }
+    .movieContainer{
+        margin-left: 0;
+    }
+    .profilePage .profileInfo .persona .profileName{
+        font-size: 1.7rem;
+    }
+    .profilePage .profileInfo .persona .profileEmail{
+        font-size: 1.2rem;
+    }
+    .profilePage .profileInfo .timeStamp .time{
+        font-size: 1.5rem;
+    }
+    /* WATCHLIST */
+    .watchListContainer .cardContainer{
+        grid-template-columns: 15% 85%;
+    }
+    .watchlistNavbar > *{
+        font-size: 1.35rem;
+    }
+    .watchListContainer .cardContainer .movieContent .movieContentWrapper .movieWrapper > *{
+        margin: 0.5rem auto;
+        padding: 0;
+    }
+    .movieContentWrapper .movieWrapper .movieName{
+        font-size: 1.5rem;
+    }
+    .movieContentWrapper .movieWrapper .movieGenre{
+        font-size: 1.25rem;
+    }
+    .movieContentWrapper .movieRating{
+        font-size: 1.4rem;
+    }
+    .movieStatus .changeStatus{
+        font-size: 1.1rem;
+    }
+    .movieStatus .status{
+        font-size: 1.3rem;
+    }
+
+
+    .carouselHeader{
+        margin-top: 2rem;
+    }
+}
+
+
+
